@@ -91,7 +91,7 @@ $rs = $conn->query($sql);
 ?>
 
 <div class="new-blog-grid">
-  <?php while($row = $rs->fetch_assoc()) { ?>
+  <?php if ($rs) { while($row = $rs->fetch_assoc()) { ?>
    <div class="new-blog-card">
   <?php if (!empty($row['main_image'])) { ?>
     <img src="/website_login/admin/uploads_img/<?php echo htmlspecialchars($row['main_image']); ?>" 
@@ -108,7 +108,7 @@ $rs = $conn->query($sql);
   </div>
 </div>
 
-  <?php } ?>
+  <?php } } else { echo "<p>Unable to load blogs at the moment.</p>"; } ?>
 </div>
 
 <!--  footer -->
