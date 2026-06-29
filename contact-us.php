@@ -105,51 +105,15 @@ if(isset($_GET['success'])){
 
 
 
-<!-- Premium Hero Section -->
-<section class="premium-contact-hero" style="background: linear-gradient(rgba(10, 20, 40, 0.7), rgba(10, 20, 40, 0.7)), url('assets/images/contact_hero_bg_1778579776739.png'); background-size: cover; background-position: center; padding: 140px 0 100px;">
-  <div class="container text-center">
-    <div class="badge bg-primary mb-3 px-3 py-2 rounded-pill animate__animated animate__fadeIn">WE ARE HERE TO HELP</div>
-    <h1 class="display-3 fw-bold mb-3 text-white animate__animated animate__fadeInDown" style="letter-spacing: -1px;">Let's <span style="color: #f6a623; text-shadow: 0 0 20px rgba(246, 166, 35, 0.3);">Connect</span></h1>
-    <p class="lead text-white-50 animate__animated animate__fadeInUp animate__delay-1s mx-auto" style="max-width: 600px;">Have a question or ready to transform your business? Drop us a message and our experts will get back to you within 24 hours.</p>
-  </div>
-</section>
-
-<section class="contact-section-new" style="margin-top: -60px; padding-bottom: 80px; background: #f8f9fa;">
+<section class="contact-section-new" style="padding-top: 60px; padding-bottom: 80px; background: #f8f9fa;">
   <div class="container">
-    <div class="row g-4">
-      <!-- Contact Info Cards -->
-      <div class="col-lg-4">
-        <div class="contact-info-wrap">
-          <div class="info-card animate__animated animate__fadeInLeft" style="border-left: 5px solid #0d6efd;">
-            <div class="info-icon"><i class="fas fa-envelope"></i></div>
-            <div class="info-content">
-              <h5>Email Support</h5>
-              <a href="mailto:sales.digifysoft@digifycrm.in" class="fw-bold text-dark">sales.digifysoft@digifycrm.in</a>
-            </div>
-          </div>
-          <div class="info-card animate__animated animate__fadeInLeft animate__delay-1s" style="border-left: 5px solid #f6a623;">
-            <div class="info-icon" style="background: #f6a623;"><i class="fas fa-phone-alt"></i></div>
-            <div class="info-content">
-              <h5>Phone Number</h5>
-              <a href="tel:+917425016636" class="fw-bold text-dark">+91 7425016636</a>
-            </div>
-          </div>
-          <div class="info-card animate__animated animate__fadeInLeft animate__delay-2s" style="border-left: 5px solid #28a745;">
-            <div class="info-icon" style="background: #28a745;"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="info-content">
-              <h5>Our Presence</h5>
-              <p class="mb-2 text-dark"><i class="fas fa-building me-2 text-muted"></i><strong>Noida Office:</strong> Knowledge Park V, Sector 12</p>
-              <p class="mb-0 text-dark"><i class="fas fa-building me-2 text-muted"></i><strong>Jaipur Office:</strong> Akash Ganga, Civil Lines</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
 
-      <!-- Contact Form -->
-      <div class="col-lg-8">
-        <div class="contact-form-premium animate__animated animate__fadeInRight">
-          <div class="form-header mb-4">
-            <h4 class="fw-bold text-dark mb-1">Send a Message</h4>
+        <!-- Contact Form -->
+        <div class="contact-form-premium animate__animated animate__fadeInUp mb-5" style="box-shadow: 0 15px 35px rgba(0,0,0,0.05); background: #fff; padding: 40px; border-radius: 20px;">
+          <div class="form-header mb-4 text-center">
+            <h3 class="fw-bold text-dark mb-1">Send a Message</h3>
             <p class="text-muted small">Required fields are marked with *</p>
           </div>
           <?= $msg ?>
@@ -165,28 +129,10 @@ if(isset($_GET['success'])){
             </div>
             <div class="col-md-6">
               <div class="premium-input-group">
-                <label class="form-label fw-bold small text-muted">BUSINESS NAME*</label>
-                <div class="input-with-icon">
-                  <i class="fas fa-briefcase"></i>
-                  <input type="text" name="firm" class="form-control" placeholder="Company Name" required>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="premium-input-group">
                 <label class="form-label fw-bold small text-muted">MOBILE NUMBER*</label>
                 <div class="input-with-icon">
                   <i class="fas fa-phone"></i>
                   <input type="text" name="mobile" class="form-control" placeholder="+91 0000000000" required>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="premium-input-group">
-                <label class="form-label fw-bold small text-muted">WHATSAPP NUMBER*</label>
-                <div class="input-with-icon">
-                  <i class="fab fa-whatsapp"></i>
-                  <input type="text" name="whatsapp" class="form-control" placeholder="+91 0000000000" required>
                 </div>
               </div>
             </div>
@@ -215,21 +161,12 @@ if(isset($_GET['success'])){
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-12">
               <div class="premium-input-group">
                 <label class="form-label fw-bold small text-muted">CITY / LOCATION</label>
                 <div class="input-with-icon">
                   <i class="fas fa-map-marker-alt"></i>
                   <input type="text" name="location" class="form-control" placeholder="Enter City">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="premium-input-group">
-                <label class="form-label fw-bold small text-muted">STATE</label>
-                <div class="input-with-icon">
-                  <i class="fas fa-globe"></i>
-                  <input type="text" name="state" class="form-control" placeholder="Enter State">
                 </div>
               </div>
             </div>
@@ -240,12 +177,47 @@ if(isset($_GET['success'])){
               </div>
             </div>
             <div class="col-12 text-center mt-4">
-              <button type="submit" class="premium-submit-btn">
+              <button type="submit" class="premium-submit-btn" style="padding: 12px 30px; font-weight: bold;">
                 Send Message <i class="fas fa-paper-plane ms-2"></i>
               </button>
             </div>
           </form>
         </div>
+
+        <!-- Contact Info Cards -->
+        <div class="contact-info-wrap mt-5">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+              <div class="info-card flex-column text-center h-100 animate__animated animate__fadeInUp" style="border-top: 5px solid #0d6efd; padding-top: 30px;">
+                <div class="info-icon mx-auto mb-3"><i class="fas fa-envelope"></i></div>
+                <div class="info-content">
+                  <h5>Email Support</h5>
+                  <a href="mailto:sales.digifysoft@digifycrm.in" class="fw-bold text-dark">sales.digifysoft@digifycrm.in</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info-card flex-column text-center h-100 animate__animated animate__fadeInUp animate__delay-1s" style="border-top: 5px solid #f6a623; padding-top: 30px;">
+                <div class="info-icon mx-auto mb-3" style="background: #f6a623;"><i class="fas fa-phone-alt"></i></div>
+                <div class="info-content">
+                  <h5>Phone Number</h5>
+                  <a href="tel:+917425016636" class="fw-bold text-dark">+91 7425016636</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info-card flex-column text-center h-100 animate__animated animate__fadeInUp animate__delay-2s" style="border-top: 5px solid #28a745; padding-top: 30px;">
+                <div class="info-icon mx-auto mb-3" style="background: #28a745;"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-content">
+                  <h5>Our Presence</h5>
+                  <p class="mb-2 text-dark"><i class="fas fa-building me-2 text-muted"></i><strong>Noida Office:</strong><br>Knowledge Park V, Sector 12</p>
+                  <p class="mb-0 text-dark"><i class="fas fa-building me-2 text-muted"></i><strong>Jaipur Office:</strong><br>Akash Ganga, Civil Lines</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

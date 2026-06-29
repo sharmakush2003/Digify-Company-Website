@@ -60,6 +60,8 @@
 </section>-->
   <!-- top heade end here -->
 
+   <!-- sticky wrapper start -->
+   <div class="sticky-header-wrapper" style="position: sticky; top: 0; z-index: 1050; background: #fff; width: 100%;">
    <!-- header start  -->
    <header>
       <div class="container">
@@ -321,6 +323,8 @@
            </button>
        </div>
    </div>
+   </div>
+   <!-- sticky wrapper end -->
 
    <!-- WhatsApp Icon Box (moved outside header context to remain fixed to viewport) -->
    <div class="whatsapp-icon" style="position:fixed; bottom:20px; left:20px; z-index:9999;">
