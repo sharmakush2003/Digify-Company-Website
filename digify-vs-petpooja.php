@@ -18,7 +18,7 @@ include 'header.php';
             <div class="col-md-12">
                 <div class="bridal-store">
                     <h1>Why Growing Businesses Choose <span>Digify Soft Solutions</span> over Petpooja</h1>
-                    <p>While Petpooja is a standardized billing application built mainly for restaurants, Digify Soft Solutions delivers a fully customizable ERP, CRM, and POS system designed to run retail, wholesale, manufacturing, and services without limits.</p>
+                    <p>Petpooja is a standardized billing application designed strictly for restaurants. Digify Soft Solutions delivers a fully customizable ERP, CRM, and POS system tailored to run retail, wholesale, manufacturing, and services with zero limits and direct local support.</p>
                     <div class="btn-wrap">
                         <a href="contact-us.php" class="schedule-btn">Schedule Free Demo</a>
                         <a href="#comparison" class="schedule-btn">Explore Comparison Table</a>
@@ -29,28 +29,19 @@ include 'header.php';
     </div>
 </section>
 
-<!-- Challenge vs Solution Section -->
-<section class="why-choose-sec">
+<!-- Introduction Section -->
+<section class="why-choose-sec pt-60 pb-60" style="background: #ffffff !important; border-bottom: none;">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 order-md-2">
-                <div class="expertise-img">
-                    <figure>
-                        <img src="assets/images/img110.jpg" alt="Digify vs Petpooja Comparison" class="img-fluid">
-                    </figure>
-                </div>
-            </div>
-            <div class="col-md-6 order-md-1">
-                <div class="heading-wrap text-start mobile-a pro-list">
-                    <h2>Key Differences Between <span>Digify</span> and Petpooja</h2>
-                </div>
-                <div class="expertise-wrap pro-list">
-                    <h5>Why Digify Stands Out</h5>
-                    <ul>
-                        <li><strong>Flexible Across All Industries</strong><br>Petpooja is designed strictly for F&B and restaurant setups. Digify Soft Solutions is a versatile enterprise platform that manages Retail Stores, Wholesalers, Manufacturers, Service Agencies, and Restaurants alike.</li>
-                        <li><strong>100% Tailor-made Workflows</strong><br>Don't change your business processes to fit a rigid software. Digify is fully customizable; we modify our database, templates, and dashboard workflows to match exactly how your team operates.</li>
-                        <li><strong>Comprehensive ERP Control</strong><br>Manage raw materials, production stages, multi-warehouse transfers, supplier ledgers, and delivery dispatches. Digify handles full supply chain logistics that simple billing software cannot support.</li>
-                    </ul>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="heading-wrap">
+                    <h2>Rigid Restaurant POS vs. <span>Agile Enterprise ERP</span></h2>
+                    <p style="font-size: 18px; line-height: 1.7; color: #475569; margin-top: 15px;">
+                        Petpooja is a great, standardized tool if you run a simple cafe or restaurant. However, if your business operations involve complex supply chains, custom invoice flows, manufacturing stages, multi-channel distribution, or integrated corporate accounting, you will quickly hit its software limits. 
+                    </p>
+                    <p style="font-size: 18px; line-height: 1.7; color: #475569; margin-top: 10px;">
+                        Here is a factual, head-to-head comparison of why growing businesses migrate to **Digify Soft Solutions** for complete, customized control.
+                    </p>
                 </div>
             </div>
         </div>
@@ -58,58 +49,132 @@ include 'header.php';
 </section>
 
 <!-- Comparison Table Section -->
-<section id="comparison" class="comparison-section">
+<section id="comparison" class="comparison-section pt-60 pb-60">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="heading-wrap text-center">
-                    <h2>Side-by-Side <span>Comparison</span></h2>
-                    <p>Compare the core capabilities of Digify Soft Solutions and Petpooja to make the right choice for your business growth.</p>
+                    <h2>Factual <span>Head-to-Head</span> Comparison</h2>
+                    <p>Review the detailed feature comparison across all business operation areas.</p>
                 </div>
                 <div class="comp-table-responsive">
                     <table class="comp-table">
                         <thead>
                             <tr>
-                                <th>Feature / Capability</th>
-                                <th>Petpooja</th>
-                                <th>Digify Soft Solutions</th>
+                                <th style="width: 34%;">Feature / Capability</th>
+                                <th style="width: 33%;">Petpooja</th>
+                                <th style="width: 33%;">Digify Soft Solutions</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Category: General Fit -->
+                            <tr style="background: #f1f5f9; font-weight: 700; color: #0f172a;">
+                                <td colspan="3" style="padding: 12px 24px; font-size: 16px; border-bottom: 2px solid #cbd5e1;"><i class="fas fa-sliders-h me-2 text-primary"></i> GENERAL CAPABILITIES & FIT</td>
+                            </tr>
                             <tr>
-                                <td><strong>Target Industries</strong></td>
-                                <td>F&B / Restaurants only</td>
+                                <td><strong>Target Businesses</strong></td>
+                                <td>Restaurants & F&B setups only.</td>
                                 <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Retail, Wholesale, Manufacturing, Services, F&B</span></td>
                             </tr>
                             <tr>
-                                <td><strong>Workflow Customization</strong></td>
-                                <td><span class="comp-status-no"><i class="fas fa-times-circle"></i> Rigid Templates</span></td>
-                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> 100% Tailored to your business</span></td>
+                                <td><strong>Custom Feature Requests</strong></td>
+                                <td><span class="comp-status-no"><i class="fas fa-times-circle"></i> No. Rigid product roadmap.</span></td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> 100% Custom features built for you.</span></td>
                             </tr>
                             <tr>
-                                <td><strong>ERP & Raw Materials Control</strong></td>
-                                <td>Basic inventory tracking</td>
-                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Complete Manufacturing, BOM & Warehouse ERP</span></td>
+                                <td><strong>Code & Data Security</strong></td>
+                                <td>SaaS hosted, shared cloud space.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Dedicated secure cloud database.</span></td>
+                            </tr>
+
+                            <!-- Category: POS & Billing -->
+                            <tr style="background: #f1f5f9; font-weight: 700; color: #0f172a;">
+                                <td colspan="3" style="padding: 12px 24px; font-size: 16px; border-bottom: 2px solid #cbd5e1;"><i class="fas fa-cash-register me-2 text-primary"></i> POS & BILLING EXPERIENCE</td>
                             </tr>
                             <tr>
-                                <td><strong>Integrated Accounting</strong></td>
-                                <td>Sales & basic billing reports</td>
-                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Full ledgers, Trial Balance, P&L, Balance Sheets</span></td>
+                                <td><strong>Offline Billing Support</strong></td>
+                                <td>Yes, offline sync is supported.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Yes, real-time sync with local SQLite backup</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multi-Counter Counters</strong></td>
+                                <td>Supports multi-terminal setup.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Yes, with terminal-level shift reports</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>WhatsApp Invoicing</strong></td>
+                                <td>Basic transactional updates.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Marketing campaigns + PDF invoice sharing</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Weighing Scale Integration</strong></td>
+                                <td>Supported on specific restaurant models.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Universal weighing scale serial port connectivity</span></td>
+                            </tr>
+
+                            <!-- Category: ERP & Inventory -->
+                            <tr style="background: #f1f5f9; font-weight: 700; color: #0f172a;">
+                                <td colspan="3" style="padding: 12px 24px; font-size: 16px; border-bottom: 2px solid #cbd5e1;"><i class="fas fa-boxes me-2 text-primary"></i> ERP & INVENTORY MANAGEMENT</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Raw Material Tracking</strong></td>
+                                <td>Basic recipe-based stock deduction.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Multi-level Bill of Materials (BOM) & waste logs</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multi-Warehouse Stocks</strong></td>
+                                <td><span class="comp-status-limited"><i class="fas fa-exclamation-circle"></i> Add-on model.</span></td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Centralized multi-city stock synchronization</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Batch & Expiry Control</strong></td>
+                                <td>Standard expiry notifications.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Batch tracking, FIFO inventory, barcode creation</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Purchase Order Automation</strong></td>
+                                <td>Basic PO generation.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Supplier comparison, auto-orders, GRN sync</span></td>
+                            </tr>
+
+                            <!-- Category: Accounting & Tax -->
+                            <tr style="background: #f1f5f9; font-weight: 700; color: #0f172a;">
+                                <td colspan="3" style="padding: 12px 24px; font-size: 16px; border-bottom: 2px solid #cbd5e1;"><i class="fas fa-file-invoice-dollar me-2 text-primary"></i> ACCOUNTING & TAX COMPLIANCE</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Double-Entry Ledger Accounts</strong></td>
+                                <td><span class="comp-status-no"><i class="fas fa-times-circle"></i> No, sales reporting only.</span></td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Yes, complete journal ledger control</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Profit & Loss + Balance Sheets</strong></td>
+                                <td><span class="comp-status-no"><i class="fas fa-times-circle"></i> No.</span></td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Yes, dynamically generated audit-ready reports</span></td>
                             </tr>
                             <tr>
                                 <td><strong>GST Compliance & E-Invoicing</strong></td>
-                                <td>Basic tax invoices</td>
-                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> GST filing ready, automated E-Invoices & E-Way bills</span></td>
+                                <td>Basic GST invoice format.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Government-integrated E-Invoice & E-Way bills</span></td>
+                            </tr>
+
+                            <!-- Category: Onboarding & Support -->
+                            <tr style="background: #f1f5f9; font-weight: 700; color: #0f172a;">
+                                <td colspan="3" style="padding: 12px 24px; font-size: 16px; border-bottom: 2px solid #cbd5e1;"><i class="fas fa-headset me-2 text-primary"></i> ONBOARDING & ACCOUNT SUPPORT</td>
                             </tr>
                             <tr>
-                                <td><strong>CRM & Automated Marketing</strong></td>
-                                <td><span class="comp-status-limited"><i class="fas fa-exclamation-circle"></i> Points only</span></td>
-                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> WhatsApp campaigns, customer profiles, instant alerts</span></td>
+                                <td><strong>On-site Setup & Training</strong></td>
+                                <td><span class="comp-status-no"><i class="fas fa-times-circle"></i> Remote calls only.</span></td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> On-site deployment and team training sessions</span></td>
                             </tr>
                             <tr>
-                                <td><strong>Customer Support Model</strong></td>
-                                <td>Standard Ticket support</td>
-                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Dedicated Account Manager & Local On-site team</span></td>
+                                <td><strong>Data Migration Support</strong></td>
+                                <td>Self-service CSV import.</td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Complete assisted item, history & client data import</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dedicated Account Manager</strong></td>
+                                <td><span class="comp-status-limited"><i class="fas fa-exclamation-circle"></i> Call center queue.</span></td>
+                                <td><span class="comp-status-yes"><i class="fas fa-check-circle"></i> Dedicated executive & priority tech support</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -120,25 +185,27 @@ include 'header.php';
 </section>
 
 <!-- Deep Dive Reasons -->
-<section class="clothing-stores-sec software-sec">
+<section class="clothing-stores-sec software-sec pt-60 pb-60" style="background: #f8fafc !important;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12">
                 <div class="clothing-stores-text text-center">
-                    <h2>How Digify Drives Efficiency & Revenue</h2>
-                    <p>Upgrade to a comprehensive enterprise tool that simplifies operations and grows your sales volume.</p>
+                    <h2>Why Digify is the Superior Long-Term Alternative</h2>
+                    <p style="max-width: 700px; margin: 0 auto 40px; font-size: 16px; color: #64748b;">
+                        While POS systems handle simple checkout counters, Digify is an enterprise-wide hub connecting your billing desks, purchase inventory, manufacturing workshop, and tax ledgers into one secure system.
+                    </p>
                     <div class="erp-item-wrap inventory-wrap">
                         <div class="erp-item">
-                            <h4>1. Fully Customized Modules</h4>
-                            <p>We configure every module, receipt style, invoice template, and report filter to work exactly the way your team does—saving hours of training.</p>
+                            <h4>Tailored Codebase (Zero Rigid Rules)</h4>
+                            <p>Most SaaS billing systems lock you into fixed options. With Digify, if you need a custom field, a distinct warehouse routing logic, or a specific barcode design, our developers write it directly for you.</p>
                         </div>
                         <div class="erp-item">
-                            <h4>2. Advanced Tally-like Accounting</h4>
-                            <p>No need for third-party accounting apps. Every POS sale, purchase order, and expense voucher automatically updates your ledger accounts and tax sheets.</p>
+                            <h4>Full Double-Entry Accounting</h4>
+                            <p>Eliminate manual data entries into Tally or external packages. All purchases, sales, supplier payments, and staff salary ledgers update automatically inside your Digify account.</p>
                         </div>
                         <div class="erp-item">
-                            <h4>3. Complete Multi-Branch Sync</h4>
-                            <p>Monitor warehouse stocks, outlet dispatches, and sales registers across all cities in real-time from a single centralized dashboard.</p>
+                            <h4>Complete Manufacturing Controls</h4>
+                            <p>If you manufacture goods, track raw material inputs (BOM), track production scrap, configure multi-stage assemblies, and auto-calculate product margins dynamically.</p>
                         </div>
                     </div>
                 </div>
@@ -148,7 +215,7 @@ include 'header.php';
 </section>
 
 <!-- FAQ Accordion -->
-<section class="faq-template">
+<section class="faq-template pt-60 pb-60">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
