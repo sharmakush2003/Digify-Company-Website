@@ -662,15 +662,33 @@ section {
 
 /* LEGAL DISCLAIMER STYLING */
 .legal-disclaimer-sec {
-  background: #f8fafc !important;
+  background: #f1f5f9 !important;
   padding: 40px 0 !important;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #cbd5e1;
+}
+
+.legal-disclaimer-box {
+  background: #ffffff;
+  border-left: 4px solid #64748b;
+  padding: 24px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.legal-disclaimer-box h5 {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .legal-disclaimer-text {
-  font-size: 12px !important;
-  line-height: 1.6 !important;
-  color: #64748b !important;
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: #475569 !important;
   text-align: justify;
+  margin: 0 !important;
 }
 

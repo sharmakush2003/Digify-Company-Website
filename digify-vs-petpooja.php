@@ -272,8 +272,11 @@ include 'header.php';
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <div class="legal-disclaimer-text">
-                    <strong>Legal Disclaimer:</strong> Petpooja is a registered trademark of its respective owner (Appetitoz Hospitality Pvt. Ltd. / respective corporate entities). The comparison presented on this webpage is compiled from publicly available data, product description pages, and customer testimonials. This data is intended solely for general informational and comparative purposes. While we strive to present accurate and updated information, software features, specifications, and subscription models can change frequently. Digify Soft Solutions does not claim any ownership, representation, or direct affiliation with Petpooja, and makes no representations of ongoing completeness or correctness of competitor details.
+                <div class="legal-disclaimer-box">
+                    <h5>Trademark Notice & Legal Disclaimer</h5>
+                    <p class="legal-disclaimer-text">
+                        Petpooja is a registered trademark of its respective owner (Appetitoz Hospitality Pvt. Ltd. / respective corporate entities). The comparison presented on this webpage is compiled from publicly available data, product description pages, and customer testimonials. This data is intended solely for general informational and comparative purposes. While we strive to present accurate and updated information, software features, specifications, and subscription models can change frequently. Digify Soft Solutions does not claim any ownership, representation, or direct affiliation with Petpooja, and makes no representations of ongoing completeness or correctness of competitor details.
+                    </p>
                 </div>
             </div>
         </div>
