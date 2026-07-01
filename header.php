@@ -40,6 +40,11 @@
                   font-size: 2.2rem !important;
               }
           }
+
+          /* Global Fix: Ensure navigation dropdowns render on top of sticky promo ribbons */
+          .sub-menu, .mega-menu {
+              z-index: 10000 !important;
+          }
       </style>
 
    </head>

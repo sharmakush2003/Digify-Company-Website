@@ -87,7 +87,7 @@ include 'db.php';
 include 'fetch_meta.php';
  
 $sql = "SELECT id, main_title, main_image, slug, main_paragraph FROM blog_master ORDER BY id DESC";
-$rs = $conn->query($sql);
+$rs = $conn ? $conn->query($sql) : false;
 ?>
 
 <div class="new-blog-grid">

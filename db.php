@@ -29,10 +29,34 @@ $password = "";
 $dbname = "test"; // Please replace with your actual database name
 
 // Create connection
-$conn = @new mysqli($servername, $username, $password, $dbname);
+$conn = false;
 
-// Check connection (Silently fail so it doesn't break the UI)
-if ($conn->connect_error) {
-    // You can handle connection error here
+// Fast socket check to prevent waiting for connection timeout when MySQL is down
+$check_host = ($servername === "localhost") ? "127.0.0.1" : $servername;
+$port = 3306;
+$db_live = false;
+
+try {
+    $fp = @fsockopen($check_host, $port, $errno, $errstr, 0.1);
+    if ($fp) {
+        $db_live = true;
+        fclose($fp);
+    }
+} catch (Throwable $e) {
+    $db_live = false;
+}
+
+if ($db_live) {
+    try {
+        if (function_exists('mysqli_report')) {
+            mysqli_report(MYSQLI_REPORT_OFF);
+        }
+        $conn = @new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            $conn = false;
+        }
+    } catch (Throwable $e) {
+        $conn = false;
+    }
 }
 ?>

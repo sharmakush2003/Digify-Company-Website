@@ -4,20 +4,23 @@ include 'db.php';
 
 $input = json_decode(file_get_contents("php://input"), true);
 
-$lead_name = mysqli_real_escape_string($conn, $input['lead_name'] ?? '');
-$phone     = mysqli_real_escape_string($conn, $input['phone'] ?? '');
-$message   = mysqli_real_escape_string($conn, $input['message'] ?? '');
+$lead_name = $conn ? mysqli_real_escape_string($conn, $input['lead_name'] ?? '') : addslashes($input['lead_name'] ?? '');
+$phone     = $conn ? mysqli_real_escape_string($conn, $input['phone'] ?? '') : addslashes($input['phone'] ?? '');
+$message   = $conn ? mysqli_real_escape_string($conn, $input['message'] ?? '') : addslashes($input['message'] ?? '');
 $source    = 'WhatsApp Icon';
 $response  = [];
 
 if (!empty($lead_name) && !empty($phone)) {
 
     // --- Insert Lead ---
-    $insertSql = "INSERT INTO leads_master (lead_name, phone, message, source, created_at)
-                  VALUES ('$lead_name', '$phone', '$message', '$source', NOW())";
-    $insert = mysqli_query($conn, $insertSql);
+    $insert = false;
+    if ($conn) {
+        $insertSql = "INSERT INTO leads_master (lead_name, phone, message, source, created_at)
+                      VALUES ('$lead_name', '$phone', '$message', '$source', NOW())";
+        $insert = mysqli_query($conn, $insertSql);
+    }
 
-    if ($insert) {
+    if ($insert || !$conn) {
         // --- Call WhatsApp API ---
         $apiUrl = "https://wa20.nuke.co.in/v5/api/index.php/addbroadcast";
         $token  = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NjA3MDY0NDYsImRhdGEiOnsidXNlcm5hbWUiOiJEaWdpZnlfc29mdCIsIm5hbWUiOiJEaWdpZnlfc29mdCJ9fQ.lbhITMYPzs0RvDRf-YhqbJ5r63rFUPnInfTnIG_T998";
@@ -50,7 +53,7 @@ if (!empty($lead_name) && !empty($phone)) {
     } else {
         $response['status'] = 'error';
         $response['msg'] = 'Failed to insert lead.';
-        $response['sql_error'] = mysqli_error($conn);
+        $response['sql_error'] = $conn ? mysqli_error($conn) : 'No database connection';
     }
 } else {
     $response['status'] = 'error';

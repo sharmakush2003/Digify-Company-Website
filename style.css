@@ -1485,17 +1485,26 @@ ul.navbar-nav li a.active {
 @media (max-width: 991px) {
   .mega-menu,
   .sub-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    display: none;
-    margin-top: 10px;
+    position: static !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    margin-top: 10px !important;
+    transition: none !important;
   }
 
   .nav-item.open > .mega-menu,
-  .nav-item.open > .sub-menu {
-    display: block;
+  .nav-item.open > .sub-menu,
+  .nav-item.active > .mega-menu,
+  .nav-item.active > .sub-menu,
+  .nav-item.show > .mega-menu,
+  .nav-item.show > .sub-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .navbar-nav .nav-link {
@@ -1540,10 +1549,10 @@ ul.navbar-nav li:last-child {
   margin-left: 6px;
   font-size: 14px;
   transition: all 0.3s ease;
-  color: inherit;   /* ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“ important: icons same color lenge as text */
+  color: inherit;   /* Important: icons same color as text */
 }
 
-/* Hover / Active state ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ text + icon */
+/* Hover / Active state -> text + icon */
 .navbar-nav .nav-item:hover > .nav-link,
 .navbar-nav .nav-item.active > .nav-link {
   color: #ff0084; /* highlight color */

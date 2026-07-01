@@ -7,53 +7,58 @@ include 'db.php';
 ========================= */
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name     = mysqli_real_escape_string($conn, trim($_POST["name"] ?? ''));
-    $email    = mysqli_real_escape_string($conn, trim($_POST["email"] ?? ''));
-    $mobile   = mysqli_real_escape_string($conn, trim($_POST["mobile"] ?? ''));
-    $location = mysqli_real_escape_string($conn, trim($_POST["location"] ?? ''));
-    $industry = mysqli_real_escape_string($conn, trim($_POST["industry"] ?? ''));
-    $whatsapp = mysqli_real_escape_string($conn, trim($_POST["whatsapp"] ?? ''));
-    $state    = mysqli_real_escape_string($conn, trim($_POST["state"] ?? ''));
-    $firm     = mysqli_real_escape_string($conn, trim($_POST["firm"] ?? ''));
-    $remark   = mysqli_real_escape_string($conn, trim($_POST["remark"] ?? ''));
-    $tdate    = date('Y-m-d');
+    if ($conn) {
+        $name     = mysqli_real_escape_string($conn, trim($_POST["name"] ?? ''));
+        $email    = mysqli_real_escape_string($conn, trim($_POST["email"] ?? ''));
+        $mobile   = mysqli_real_escape_string($conn, trim($_POST["mobile"] ?? ''));
+        $location = mysqli_real_escape_string($conn, trim($_POST["location"] ?? ''));
+        $industry = mysqli_real_escape_string($conn, trim($_POST["industry"] ?? ''));
+        $whatsapp = mysqli_real_escape_string($conn, trim($_POST["whatsapp"] ?? ''));
+        $state    = mysqli_real_escape_string($conn, trim($_POST["state"] ?? ''));
+        $firm     = mysqli_real_escape_string($conn, trim($_POST["firm"] ?? ''));
+        $remark   = mysqli_real_escape_string($conn, trim($_POST["remark"] ?? ''));
+        $tdate    = date('Y-m-d');
 
-    // Duplicate check
-  /*   $check = mysqli_query($conn, "SELECT lid FROM sf_lead_master WHERE number='$mobile'");
-    if(mysqli_num_rows($check) > 0){
-		
-        header("Location: contact-us.php?success=2");
-        exit();
-    } */
+        // Insert lead
+        mysqli_query(
+            $conn,
+            "INSERT INTO sf_lead_master
+            (partyid, email, number, whatsappnumber, party_city, industry, party_state, firm, intial_remark, status, tdate)
+            VALUES
+            ('$name', '$email', '$mobile', '$whatsapp', '$location', '$industry', '$state', '$firm', '$remark', 7,'$tdate')"
+        );
 
-    // Insert lead
-    mysqli_query(
-        $conn,
-        "INSERT INTO sf_lead_master
-        (partyid, email, number, whatsappnumber, party_city, industry, party_state, firm, intial_remark, status, tdate)
-        VALUES
-        ('$name', '$email', '$mobile', '$whatsapp', '$location', '$industry', '$state', '$firm', '$remark', 7,'$tdate')"
-    );
+        $last_id = mysqli_insert_id($conn);
+        $reference = "LD" . str_pad($last_id, 3, "0", STR_PAD_LEFT);
+        $insertweb = "
+            INSERT INTO website_contact_enquiries 
+            (name, email, mobile, whatsapp, location, industry, state, firm, remark, created_at)
+            VALUES 
+            ('$name', '$email', '$mobile', '$whatsapp', '$location', '$industry', '$state', '$firm', '$remark', NOW())
+        ";
+        $dbSuccess = mysqli_query($conn, $insertweb);
+        mysqli_query($conn, "UPDATE sf_lead_master SET reference='$reference' WHERE lid='$last_id'");
 
-    $last_id = mysqli_insert_id($conn);
-    $reference = "LD" . str_pad($last_id, 3, "0", STR_PAD_LEFT);
-   $insertweb = "
-        INSERT INTO website_contact_enquiries 
-        (name, email, mobile, whatsapp, location, industry, state, firm, remark, created_at)
-        VALUES 
-        ('$name', '$email', '$mobile', '$whatsapp', '$location', '$industry', '$state', '$firm', '$remark', NOW())
-    ";
-    $dbSuccess = mysqli_query($conn, $insertweb);
-    mysqli_query($conn, "UPDATE sf_lead_master SET reference='$reference' WHERE lid='$last_id'");
-
-    mysqli_query(
-        $conn,
-        "INSERT INTO sf_status_history 
-         SET party_id='$name',
-             status_id='7',
-             trans_type='add_lead',
-             trans_no='$reference'"
-    );
+        mysqli_query(
+            $conn,
+            "INSERT INTO sf_status_history 
+             SET party_id='$name',
+                 status_id='7',
+                 trans_type='add_lead',
+                 trans_no='$reference'"
+        );
+    } else {
+        $name     = addslashes(trim($_POST["name"] ?? ''));
+        $email    = addslashes(trim($_POST["email"] ?? ''));
+        $mobile   = addslashes(trim($_POST["mobile"] ?? ''));
+        $location = addslashes(trim($_POST["location"] ?? ''));
+        $industry = addslashes(trim($_POST["industry"] ?? ''));
+        $whatsapp = addslashes(trim($_POST["whatsapp"] ?? ''));
+        $state    = addslashes(trim($_POST["state"] ?? ''));
+        $firm     = addslashes(trim($_POST["firm"] ?? ''));
+        $remark   = addslashes(trim($_POST["remark"] ?? ''));
+        $reference = "LD-PENDING";
+    }
 $to = "gautam@digifycrm.in,gautamalik1@gmail.com,sales.digifysoft@digifycrm.in, sonu.digifysoft@gmail.com";
         $subject = "Free Trial Request from $name";
 

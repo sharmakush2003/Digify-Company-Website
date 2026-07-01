@@ -7,7 +7,7 @@ $slug = $_GET['slug'] ?? '';
 $blog = null;
 $details = [];
 
-if ($slug !== '') {
+if ($slug !== '' && $conn) {
     // Fetch main blog content using slug
     $sql = "SELECT * FROM blog_master WHERE slug = '$slug' LIMIT 1";
     $result = $conn->query($sql);
