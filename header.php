@@ -158,7 +158,6 @@
                                 <li><a href="lead-management.php">Lead Management</a></li>
                                 <li><a href="payroll.php">Payroll </a></li>
                                 <li><a href="education.php">Education </a></li>
-                                <li><a href="digify-vs-petpooja.php" style="color: #ff0084 !important; font-weight: bold !important;">Digify vs Petpooja</a></li>
                             </ul>
                         </li> 
 
