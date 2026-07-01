@@ -611,11 +611,11 @@ section {
   letter-spacing: 0.5px;
 }
 
-.comp-table th:nth-child(2), .comp-table td:nth-child(2) {
+.comp-table td:nth-child(2) {
   background: #f8fafc;
 }
 
-.comp-table th:nth-child(3), .comp-table td:nth-child(3) {
+.comp-table td:nth-child(3) {
   background: rgba(12, 166, 120, 0.03);
 }
 
