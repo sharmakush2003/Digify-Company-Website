@@ -222,7 +222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <link href="css/style.css" rel="stylesheet">
     <?php
     $current_page = basename($_SERVER['PHP_SELF']);
-    $product_pages = ['pos.php', 'erp.php', 'accounting.php', 'inventory.php', 'omnichannel.php', 'crm.php'];
+    $product_pages = ['pos.php', 'erp.php', 'accounting.php', 'inventory.php', 'omnichannel.php', 'crm.php', 'invoicing.php', 'logistics.php'];
     if (in_array($current_page, $product_pages)) {
         echo '    <link href="assets/css/premium-products.css" rel="stylesheet">' . "\n";
     }
